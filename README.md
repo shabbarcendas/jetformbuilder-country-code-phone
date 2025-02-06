@@ -17,7 +17,7 @@ JetFormBuilder Country Code is a WordPress plugin that enhances the JetFormBuild
 
 ## Installation
 
-1. Upload the plugin files to the `/wp-content/plugins/jetformbuilder-country-code` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/jetformbuilder-country-code-phone` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Ensure that your form fields are using the class `jet-form-builder__field text-field` for the phone input fields.
 
