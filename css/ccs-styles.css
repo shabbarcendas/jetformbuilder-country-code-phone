@@ -1,0 +1,4 @@
+.jet-form-builder__field.text-field[type='tel'] {
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
