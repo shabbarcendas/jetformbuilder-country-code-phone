@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: JetFormBuilder Country Code
- * Description: Adiciona um código de país com bandeira ao campo de entrada de telefone. Depende do plugin Crocoblock JetForm Builder e requer que o campo de texto tenha o tipo 'tel'.
+ * Description: Adds a country code with flag to the phone number input field. It relies on the Crocoblock JetForm Builder plugin and requires the text field to have the 'tel' type.
  * Version: 1.0.0
  * Author: Herald Diniz
  * Author URI: https://github.com/heralddiniz
@@ -9,9 +9,9 @@
 
 // Adiciona scripts e estilos necessários
 function ccs_enqueue_scripts() {
-    wp_enqueue_style('intl-tel-input', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css', array(), '1.0', 'all');
+    wp_enqueue_style('intl-tel-input', plugin_dir_url(__FILE__) . 'css/intlTelInput.css', array(), '1.0', 'all');
     wp_enqueue_style('ccs-styles', plugin_dir_url(__FILE__) . 'css/ccs-styles.css', array(), '1.0', 'all');
-    wp_enqueue_script('intl-tel-input', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js', array('jquery'), '17.0.8', true);
+    wp_enqueue_script('intl-tel-input', plugin_dir_url(__FILE__) . 'js/intlTelInput.min.js', array('jquery'), '17.0.8', true);
     wp_enqueue_script('ccs-custom-script', plugin_dir_url(__FILE__) . 'js/ccs-custom.js', array('intl-tel-input'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'ccs_enqueue_scripts');
@@ -30,7 +30,7 @@ function ccs_add_country_code_selector($field) {
                             callback(countryCode);
                         });
                     },
-                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+                    utilsScript: ""
                 });
             });
         </script>';
